@@ -1,23 +1,30 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="nav">
+            <router-link to="/">Создать задачу</router-link> |
+            <router-link to="/todo-list">Список задач</router-link>
+          </div>
+          <router-view/>
+        </div>
+      </div>
     </div>
-    <router-view/>
   </div>
 </template>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 #nav {
   padding: 30px;
+  text-align: center;
 }
 
 #nav a {
@@ -26,6 +33,21 @@
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #838f8f;
+}
+
+#nav a:hover,
+#nav a.router-link-exact-active:hover {
+  text-decoration: none;
+}
+
+.vue-input-tag-wrapper .input-tag {
+  background-color: #9cd5e6!important;
+  border: 1px solid #727cd3!important;
+  color: #3424c5!important;
+}
+
+.vue-input-tag-wrapper .input-tag .remove {
+  color: #333333!important;
 }
 </style>

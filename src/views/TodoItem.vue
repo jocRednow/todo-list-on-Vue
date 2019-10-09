@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <CreateEditForm :task="newTask" :formType="addNew"></CreateEditForm>
+  <div class="item">
+    <CreateEditForm :task="selectedTask" :formType="editOld"></CreateEditForm>
   </div>
 </template>
 
@@ -9,17 +9,17 @@
   import { mapState } from 'vuex';
 
   export default {
-    name: 'home',
+    name: 'todoItem',
     components: {
       CreateEditForm
     },
     data () {
       return {
-        addNew: "addNew"
+        editOld: "editOld"
       }
     },
     computed: {
-      ...mapState(['newTask'])
+      ...mapState(['selectedTask'])
     }
   }
-</script>
+</script>  
